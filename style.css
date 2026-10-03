@@ -1,0 +1,72 @@
+/* SwiftProxy landing page — pure CSS, no frameworks */
+* { box-sizing: border-box; }
+:root {
+  --bg: #0d1117; --panel: #141a26; --line: #2b3548;
+  --text: #e6edf3; --muted: #9aa7bd; --accent: #7dd3fc; --blue: #2563eb;
+}
+body { margin: 0; background: var(--bg); color: var(--text);
+  font-family: -apple-system, "Segoe UI", Roboto, Arial, Helvetica, sans-serif; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.wrap.narrow { max-width: 720px; }
+a { color: var(--accent); }
+
+/* header */
+.topbar { border-bottom: 1px solid var(--line); background: rgba(13,17,23,.9);
+  position: sticky; top: 0; z-index: 10; }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.logo { font-size: 20px; font-weight: 800; color: var(--text); text-decoration: none; }
+.nav nav a { color: var(--muted); text-decoration: none; margin-left: 22px; font-size: 14px; }
+.nav nav a:hover { color: var(--text); }
+
+/* hero */
+.hero { text-align: center; padding: 84px 0 64px;
+  background: radial-gradient(600px 300px at 50% -60px, rgba(37,99,235,.25), transparent); }
+.hero h1 { font-size: 46px; margin: 0 0 12px; letter-spacing: -1px; }
+.accent { color: var(--accent); }
+.sub { color: var(--muted); font-size: 18px; max-width: 640px; margin: 0 auto 28px; }
+
+#goform { display: flex; gap: 10px; max-width: 640px; margin: 0 auto; }
+#goform input { flex: 1; height: 52px; border: 1px solid var(--line); border-radius: 10px;
+  background: #0b0f16; color: var(--text); padding: 0 16px; font-size: 16px; min-width: 0; }
+#goform input:focus { outline: none; border-color: var(--blue); }
+#goform button { height: 52px; padding: 0 28px; border: 0; border-radius: 10px;
+  background: var(--blue); color: #fff; font-size: 16px; font-weight: 700; cursor: pointer; }
+#goform button:hover { background: #1d4ed8; }
+
+.quick { margin-top: 18px; color: var(--muted); font-size: 14px;
+  display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; }
+.quick button { background: var(--panel); border: 1px solid var(--line); color: var(--text);
+  border-radius: 20px; padding: 6px 14px; font-size: 13px; cursor: pointer; }
+.quick button:hover { border-color: var(--accent); color: var(--accent); }
+.recent-wrap { margin-top: 14px; color: var(--muted); font-size: 14px;
+  display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; }
+
+/* sections */
+.section { padding: 64px 0; }
+.section.alt { background: var(--panel); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.section h2 { text-align: center; font-size: 30px; margin: 0 0 36px; }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.step { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 26px; text-align: center; }
+.section.alt .step { background: var(--bg); }
+.step .n { width: 40px; height: 40px; margin: 0 auto 12px; border-radius: 50%;
+  background: var(--blue); color: #fff; font-weight: 800; line-height: 40px; }
+.step h3 { margin: 0 0 8px; }
+.step p { color: var(--muted); margin: 0; font-size: 14px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 24px; }
+.card h3 { margin: 0 0 8px; font-size: 17px; }
+.card p { color: var(--muted); margin: 0; font-size: 14px; }
+
+details { background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+  padding: 14px 18px; margin-bottom: 10px; }
+summary { cursor: pointer; font-weight: 700; }
+details p { color: var(--muted); margin: 10px 0 0; font-size: 15px; }
+
+footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted); font-size: 14px; text-align: center; }
+
+@media (max-width: 720px) {
+  .hero h1 { font-size: 32px; }
+  #goform { flex-direction: column; }
+  .steps, .grid { grid-template-columns: 1fr; }
+  .nav nav { display: none; }
+}

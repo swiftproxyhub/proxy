@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SwiftProxy — Free Web Proxy | Open Blocked Sites</title>
+<meta name="description" content="SwiftProxy is a free web proxy. Enter any URL to access sites blocked in your country — no signup, no software, works on any device.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap nav">
+    <a class="logo" href="index.html">&#9889; SwiftProxy</a>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <h1>Open any site, <span class="accent">anywhere.</span></h1>
+      <p class="sub">SwiftProxy is a free web proxy. Paste a URL below and browse sites that are blocked or unavailable in your country &mdash; right in your browser, no signup, no software.</p>
+
+      <form id="goform" action="proxy.php" method="post" target="_blank" autocomplete="off">
+        <input id="url" name="url" type="text" placeholder="https://example.com" spellcheck="false">
+        <button type="submit">Go &rarr;</button>
+      </form>
+
+      <div class="quick">
+        <span>Try:</span>
+        <button type="button" data-quick="https://www.youtube.com">YouTube</button>
+        <button type="button" data-quick="https://x.com">X</button>
+        <button type="button" data-quick="https://www.wikipedia.org">Wikipedia</button>
+        <button type="button" data-quick="https://www.reddit.com">Reddit</button>
+        <button type="button" data-quick="https://github.com">GitHub</button>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="how" class="section">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><h3>Paste a URL</h3><p>Enter the address of the site you can't reach directly.</p></div>
+        <div class="step"><div class="n">2</div><h3>We fetch it for you</h3><p>Our server loads the page on your behalf, so the block never sees your connection.</p></div>
+        <div class="step"><div class="n">3</div><h3>Browse normally</h3><p>Links, images and forms are rewritten to stay inside the proxy as you click around.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="section alt">
+    <div class="wrap">
+      <h2>Features</h2>
+      <div class="grid">
+        <div class="card"><h3>&#128274; HTTPS by default</h3><p>Your connection to the proxy is encrypted, and targets are fetched over TLS with certificate checks.</p></div>
+        <div class="card"><h3>&#9889; Fast &amp; free</h3><p>No accounts, no limits pages, no software to install. Just paste and go.</p></div>
+        <div class="card"><h3>&#128241; Works everywhere</h3><p>Phone, tablet, desktop &mdash; anything with a browser. Shareable proxy links too.</p></div>
+        <div class="card"><h3>&#127760; Smart rewriting</h3><p>Links, images, stylesheets, scripts and forms are rewritten so the whole site keeps working.</p></div>
+        <div class="card"><h3>&#127991; Session cookies</h3><p>Logins and preferences on the target site keep working while you browse.</p></div>
+        <div class="card"><h3>&#128737;&#65039; Abuse protection</h3><p>Private-network addresses are blocked so the proxy can't be turned against internal systems.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section">
+    <div class="wrap narrow">
+      <h2>FAQ</h2>
+      <details><summary>Is it really free?</summary><p>Yes. You host it on your own PHP hosting, so there is nothing to pay per use and no third-party proxy subscription.</p></details>
+      <details><summary>Why is a site blocked in my country?</summary><p>Governments and ISPs sometimes block domains at the network level. A web proxy fetches the page from an unrestricted server, so the block doesn't apply to your connection.</p></details>
+      <details><summary>Am I anonymous?</summary><p>The target site sees the proxy server's address, not yours. Your connection to the proxy itself is still visible to your ISP &mdash; use it for accessing information, not for anything you need to hide from your network provider.</p></details>
+      <details><summary>Will logins work?</summary><p>For most sites, yes &mdash; cookies are kept for your session. Avoid entering banking or other highly sensitive credentials through any proxy.</p></details>
+      <details><summary>Some sites look broken. Why?</summary><p>Very JavaScript-heavy apps sometimes load content in ways a proxy can't rewrite. Most classic websites, articles, docs and forums work fine.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>&#9889; <strong>SwiftProxy</strong> &mdash; a free web-proxy tool. Use responsibly and respect the laws of your country and the terms of the sites you visit.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

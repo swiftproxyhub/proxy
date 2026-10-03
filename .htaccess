@@ -1,0 +1,12 @@
+# SwiftProxy: catch requests that escaped the rewriter.
+# Some sites navigate with JavaScript (location.href = "/video/123") or build
+# URLs the page-rewriter can't see. Those land on THIS server as plain paths;
+# proxy.php uses the Referer to work out which site they belong to and
+# forwards them. Needs mod_rewrite (Apache / LiteSpeed / Hostinger have it).
+# Works best when SwiftProxy sits at the root of its own domain or subdomain.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ proxy.php?sp_stray=1 [QSA,L]
+</IfModule>
